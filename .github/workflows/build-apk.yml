@@ -25,11 +25,11 @@ jobs:
         pip install buildozer
         pip install cython
     
-    - name: Set up Java
+    - name: Set up Java (JDK 17 required by Android cmdline-tools)
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
-        java-version: '11'
+        java-version: '17'
     
     - name: Set up Android SDK
       uses: android-actions/setup-android@v2
