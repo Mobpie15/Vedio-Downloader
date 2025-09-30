@@ -15,12 +15,15 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Build with Kivy Buildozer Action
-      uses: kivy/buildozer-action@v1
+    - name: Build with Buildozer Action
+      uses: ArtemSBulgakov/buildozer-action@v1
+      env:
+        USER: root
+        PIP_BREAK_SYSTEM_PACKAGES: "1"
       with:
         workdir: .
+        buildozer_version: stable
         command: buildozer -v android debug
-        cache: true
     
     - name: Upload APK
       uses: actions/upload-artifact@v4
