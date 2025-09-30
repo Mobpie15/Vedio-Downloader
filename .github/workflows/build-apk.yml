@@ -16,6 +16,8 @@ jobs:
 
     - name: Build APK using Buildozer Action
       uses: ArtemSBulgakov/buildozer-action@v1
+      env:
+        USER: root
       with:
         workdir: .
         buildozer_version: latest
