@@ -1,0 +1,11 @@
+kivy==2.1.0
+kivymd==1.1.1
+requests==2.31.0
+yt-dlp==2023.9.24
+Pillow==10.0.1
+pycryptodomex==3.23.0
+websockets==15.0.1
+urllib3==2.5.0
+charset-normalizer==3.4.3
+certifi==2025.8.3
+idna==3.10
