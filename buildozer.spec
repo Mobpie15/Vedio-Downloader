@@ -20,7 +20,7 @@ version = 1.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,kivymd,requests,yt-dlp,Pillow,pycryptodomex,websockets,urllib3,charset-normalizer,certifi,idna
+requirements = python3,kivy,kivymd,requests,yt-dlp,Pillow,pycryptodomex,websockets,urllib3,charset-normalizer,certifi,idna,android
 
 # (str) Supported orientation (landscape, portrait or all)
 orientation = portrait
@@ -61,12 +61,19 @@ fullscreen = 0
 # Lottie files can be created using various tools, like Adobe After Effects or Synfig.
 #android.presplash_lottie = "path/to/lottie/file.json"
 
-# (str) Adaptive icon of the application (used if Android API level is 26+ at runtime)
-#android.adaptive_icon_foreground = "path/to/adaptive-icon-foreground.png"
-#android.adaptive_icon_background = "path/to/adaptive-icon-background.png"
+# (str) Application icon
+# Place your icon file at icons/icon.png (512x512 recommended)
+icon.filename = %(source.dir)s/icons/icon.png
+
+# (str) Adaptive icon (API 26+). Optional.
+#android.adaptive_icon_foreground = icons/adaptive_foreground.png
+#android.adaptive_icon_background = icons/adaptive_background.png
 
 # (list) Android application meta-data to set (key=value format)
 #android.meta_data =
+
+# (list) Permissions
+android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
 
 # (list) Android library project to add (will be added in the
 # project.properties automatically.)
